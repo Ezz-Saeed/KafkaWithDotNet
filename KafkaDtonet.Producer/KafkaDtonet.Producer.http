@@ -1,0 +1,6 @@
+@KafkaDtonet.Producer_HostAddress = http://localhost:5273
+
+GET {{KafkaDtonet.Producer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
