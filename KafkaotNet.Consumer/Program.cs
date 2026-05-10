@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using ConsumptionLibrary;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 namespace KafkaotNet.Consumer
 {

@@ -2,9 +2,9 @@
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace KafkaotNet.Consumer
+namespace ConsumptionLibrary
 {
-    internal class EventConsumerJob : BackgroundService
+    public class EventConsumerJob : BackgroundService
     {
         private readonly ILogger<EventConsumerJob> logger;
 
