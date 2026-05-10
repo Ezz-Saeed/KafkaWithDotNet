@@ -9,7 +9,16 @@ namespace KafkaotNet.Consumer
         {
             Console.WriteLine("Start consuming events.......");
 
-            var builder = Host.CreateApplicationBuilder();
+            var builder = Host.CreateApplicationBuilder(args);
+
+            builder.Services.Configure<KafkaConsumerSettings>(options =>
+            {
+                options.BootstrapServers = "localhost:9092";
+                options.GroupId = "test-group";
+                options.Topic = "test-topic";
+                options.AutoOffsetReset = Confluent.Kafka.AutoOffsetReset.Earliest;
+            });
+
             builder.Services.AddHostedService<EventConsumerJob>();
             builder.Build().Run();
         }
